@@ -33,7 +33,7 @@ public class JessApi {
         rule1 = "(defquery temp-search " +
                 "\"finds People\" " +
                 "(declare (variables ?nam ?ne ?gen))" +
-                "?character <- (character (name ?n&:(neq ?n ?nam)&:(neq ?n ?ne)) (gender ?g&:(neq ?g ?gen)) ))";
+                "?character <- (character (name ?name&:(neq ?name ?nam)&:(neq ?name ?ne)) (gender ?g&:(eq ?g ?gen)) ))";
         r.eval(query);
 //        r.batch("query.clp");
         File file = new File("Characters.csv");
@@ -76,18 +76,20 @@ public class JessApi {
         ArrayList<HarryPotterCharacter> results = new ArrayList<HarryPotterCharacter>();
         while(res.next()){
             results.add(new HarryPotterCharacter(
-                                res.getString("n"),
-                                res.getString("g"),
-                                res.getString("j"),
-                                res.getString("h"),
-                                res.getString("w"),
-                                res.getString("s"),
-                                res.getString("bs"),
-                                res.getString("hc"),
-                                res.getString("ec")
+                                res.getString("name"),
+                                res.getString("gender"),
+                                res.getString("job"),
+                                res.getString("house"),
+                                res.getString("wand"),
+                                res.getString("patronus"),
+                                res.getString("species"),
+                                res.getString("hair_color"),
+                                res.getString("blood_status"),
+                                res.getString("eye_color")
                             )
                         );
         }
         return results;
     }
+
 }

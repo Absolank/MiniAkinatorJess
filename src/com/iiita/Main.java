@@ -9,6 +9,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+
+
+        QueryItem queryItem = new QueryItem("gender");
+        queryItem.addValue(false, "Male");
+
+        System.out.println(queryItem);
+
         Scanner scanner = new Scanner(new File("Characters.csv"));
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("");

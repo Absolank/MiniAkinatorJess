@@ -42,7 +42,7 @@ public class JessApi {
         String[] arr;
         csvReader.readNext();
         while((arr = csvReader.readNext()) != null){
-            list.add(new HarryPotterCharacter(arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10], arr[11], arr[12]));
+            list.add(new HarryPotterCharacter(arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10]));
         }
         for(HarryPotterCharacter hpc : list) {
             Fact f = new Fact("character", r);
@@ -56,8 +56,6 @@ public class JessApi {
             f.setSlotValue("hair_color", new Value(hpc.getHairColor(), RU.STRING));
             f.setSlotValue("blood_status", new Value(hpc.getBloodStatus(), RU.STRING));
             f.setSlotValue("eye_color", new Value(hpc.getEyeColor(), RU.STRING));
-            f.setSlotValue("loyalty", new Value(hpc.getloyalty(), RU.LIST));
-            f.setSlotValue("skills", new Value(hpc.getSkills(), RU.LIST));
             r.assertFact(f);
         }
 //        QueryResult result = r.runQueryStar("search-by-gender", new ValueVector().add(new Value("Male", RU.STRING)));

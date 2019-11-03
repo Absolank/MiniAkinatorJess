@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class HarryPotterCharacter implements Serializable {
     String name;
     String gender;
-    ValueVector job;
+    String job;
     String house;
     String wand;
     String patronus;
@@ -18,15 +18,11 @@ public class HarryPotterCharacter implements Serializable {
     String bloodStatus;
     String hairColor;
     String eyeColor;
-    ValueVector loyalty;
-    ValueVector skills;
 
-    public HarryPotterCharacter(String name, String gender, String job, String house, String wand, String patronus, String species, String bloodStatus, String hairColor, String eyeColor, String loyalty, String skills) throws JessException {
+    public HarryPotterCharacter(String name, String gender, String job, String house, String wand, String patronus, String species, String bloodStatus, String hairColor, String eyeColor) throws JessException {
         this.name = name;
         this.gender = gender;
-        this.job = new ValueVector();
-        String[] l = job.split("[|]");
-        for (String s : l) this.job.add(new Value(s.trim(), RU.STRING));
+        this.job = job;
         this.house = house;
         this.wand = wand;
         this.patronus = patronus;
@@ -34,16 +30,6 @@ public class HarryPotterCharacter implements Serializable {
         this.bloodStatus = bloodStatus;
         this.hairColor = hairColor;
         this.eyeColor = eyeColor;
-        this.loyalty = new ValueVector();
-        l = loyalty.split("[|]");
-        for (String s : l) {
-            this.loyalty.add(new Value(s.trim(), RU.STRING));
-        }
-        this.skills = new ValueVector();
-        l = skills.split("[|]");
-        for (String s : l) {
-            this.skills.add(new Value(s.trim(), RU.STRING));
-        }
     }
 
     public String getName() {
@@ -54,7 +40,7 @@ public class HarryPotterCharacter implements Serializable {
         return gender;
     }
 
-    public ValueVector getJob() {
+    public String getJob() {
         return job;
     }
 
@@ -86,16 +72,8 @@ public class HarryPotterCharacter implements Serializable {
         return eyeColor;
     }
 
-    public ValueVector getloyalty() {
-        return loyalty;
-    }
-
-    public ValueVector getSkills() {
-        return skills;
-    }
-
     @Override
     public String toString() {
-        return "(character (name \"" + name + "\") (gender \"" + gender + "\") (job \"" + job + "\") (house \"" + house + "\") (wand \"" + wand + "\") (species \"" + species + "\") (blood_status \"" + bloodStatus + "\") (hair_color \"" + hairColor + "\") (eye_color \"" + eyeColor +"\") (slot \"" + loyalty + "\") (slot \"" + skills + "\"))";
+        return "(character (name \"" + name + "\") (gender \"" + gender + "\") (job \"" + job + "\") (house \"" + house + "\") (wand \"" + wand + "\") (species \"" + species + "\") (blood_status \"" + bloodStatus + "\") (hair_color \"" + hairColor + "\") (eye_color \"" + eyeColor +"\"))";
     }
 }

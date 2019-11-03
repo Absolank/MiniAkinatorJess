@@ -64,7 +64,7 @@ public class JessApi {
 //            System.out.println(result.getString("n"));
 //        }
     }
-    ArrayList<String> getPrediction(ArrayList<String> strings) throws JessException, IOException {
+    ArrayList<HarryPotterCharacter> getPrediction(ArrayList<String> strings) throws JessException, IOException {
         r.eval(rule1);
         ValueVector v = new ValueVector();
         for(String s : strings)
@@ -73,10 +73,20 @@ public class JessApi {
         QueryResult res = r.runQueryStar("temp-search", v);
         FileWriter fileWriter = new FileWriter(new File("x.txt"));
         r.addOutputRouter("t", fileWriter);
-        ArrayList<String> results = new ArrayList<>();
+        ArrayList<HarryPotterCharacter> results = new ArrayList<HarryPotterCharacter>();
         while(res.next()){
-            result = res.getString("n");
-            results.add(result);
+            results.add(new HarryPotterCharacter(
+                                res.getString("n"),
+                                res.getString("g"),
+                                res.getString("j"),
+                                res.getString("h"),
+                                res.getString("w"),
+                                res.getString("s"),
+                                res.getString("bs"),
+                                res.getString("hc"),
+                                res.getString("ec")
+                            )
+                        );
         }
         return results;
     }

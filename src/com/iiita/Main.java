@@ -19,10 +19,10 @@ public class Main {
         newarr.add("Ronald Bilius Weasley");
         newarr.add("Female");
         JessApi jessApi = new JessApi();
-        for(String s: jessApi.getPrediction(arrayList))
-            System.out.println(s);
-        for(String s : jessApi.getPrediction(newarr))
-            System.out.println(s);
+        // for(String s: jessApi.getPrediction(arrayList))
+        //     System.out.println(s);
+        // for(String s : jessApi.getPrediction(newarr))
+        //     System.out.println(s);
     }
 
     private static ArrayList<String> getInput() throws IOException, CsvValidationException {

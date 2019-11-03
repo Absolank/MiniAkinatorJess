@@ -33,7 +33,7 @@ public class JessApi {
         rule1 = "(defquery temp-search " +
                 "\"finds People\" " +
                 "(declare (variables ?nam ?ne ?gen))" +
-                "?character <- (character (name ?n&:(neq ?n ?nam)&:(neq ?n ?ne)) (gender ?g&:(neq ?g ?gen)) ))";
+                "?character <- (character (name ?name&:(neq ?name ?nam)&:(neq ?name ?ne)) (gender ?g&:(eq ?g ?gen)) ))";
         r.eval(query);
 //        r.batch("query.clp");
         File file = new File("Characters.csv");
@@ -66,7 +66,7 @@ public class JessApi {
 //            System.out.println(result.getString("n"));
 //        }
     }
-    ArrayList<String> getPrediction(ArrayList<String> strings) throws JessException, IOException {
+    ArrayList<String> getPrediction(QueryItem queryItem, ArrayList<String> strings) throws JessException, IOException {
         r.eval(rule1);
         ValueVector v = new ValueVector();
         for(String s : strings)
@@ -77,9 +77,10 @@ public class JessApi {
         r.addOutputRouter("t", fileWriter);
         ArrayList<String> results = new ArrayList<>();
         while(res.next()){
-            result = res.getString("n");
+            result = res.getString("name");
             results.add(result);
         }
         return results;
     }
+
 }

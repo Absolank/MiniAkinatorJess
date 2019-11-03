@@ -9,6 +9,13 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws Exception {
+
+
+        QueryItem queryItem = new QueryItem("gender");
+        queryItem.addValue(false, "Male");
+
+        System.out.println(queryItem);
+
         Scanner scanner = new Scanner(new File("Characters.csv"));
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("");
@@ -19,9 +26,9 @@ public class Main {
         newarr.add("Ronald Bilius Weasley");
         newarr.add("Female");
         JessApi jessApi = new JessApi();
-        for(String s: jessApi.getPrediction(arrayList))
+        for(String s: jessApi.getPrediction(null, arrayList))
             System.out.println(s);
-        for(String s : jessApi.getPrediction(newarr))
+        for(String s : jessApi.getPrediction(null, newarr))
             System.out.println(s);
     }
 

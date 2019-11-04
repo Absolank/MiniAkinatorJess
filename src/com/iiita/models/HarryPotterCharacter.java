@@ -1,25 +1,22 @@
-package com.iiita;
+package com.iiita.models;
 
-import jess.JessException;
-import jess.RU;
-import jess.Value;
-import jess.ValueVector;
+import jess.*;
 
 import java.io.Serializable;
 
 public class HarryPotterCharacter implements Serializable {
-    String name;
-    String gender;
-    String job;
-    String house;
-    String wand;
-    String patronus;
-    String species;
-    String bloodStatus;
-    String hairColor;
-    String eyeColor;
+    private String name;
+    private String gender;
+    private String job;
+    private String house;
+    private String wand;
+    private String patronus;
+    private String species;
+    private String bloodStatus;
+    private String hairColor;
+    private String eyeColor;
 
-    public HarryPotterCharacter(String name, String gender, String job, String house, String wand, String patronus, String species, String bloodStatus, String hairColor, String eyeColor) throws JessException {
+    public HarryPotterCharacter(String name, String gender, String job, String house, String wand, String patronus, String species, String bloodStatus, String hairColor, String eyeColor) {
         this.name = name;
         this.gender = gender;
         this.job = job;

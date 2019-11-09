@@ -1,12 +1,10 @@
-package com.iiita;
+package com.iiita.api;
 
 import com.iiita.api.JessApi;
 import com.iiita.models.*;
 import com.iiita.models.QuestionItem;
 import com.opencsv.exceptions.CsvValidationException;
-import com.sun.xml.internal.ws.server.AbstractWebServiceContext;
 import jess.JessException;
-import sun.reflect.generics.tree.Tree;
 
 import java.io.IOException;
 import java.util.*;
@@ -36,10 +34,10 @@ public class QuestionEngine {
     public LinkedList<HarryPotterCharacter> askQuestion() throws JessException {
         return jessApi.getPrediction(query);
     }
-
+    private LinkedList<HarryPotterCharacter> harryPotterCharacters;
     public QuestionItem getNextQuestion() throws Exception {
         clear();
-        LinkedList<HarryPotterCharacter> harryPotterCharacters = jessApi.getPrediction(query);
+        harryPotterCharacters = jessApi.getPrediction(query);
         if(harryPotterCharacters.size() == 1) {
             answer = harryPotterCharacters.getLast();
 //            throw new Exception("Answer reached");
@@ -62,7 +60,7 @@ public class QuestionEngine {
             int frequency = 0;
             Attribute[] attributes = Attribute.values();
             for (int i = 1; i < attributes.length; i++) {
-                if(!askedAttributes.contains(attributes[i]))
+                if(!askedAttributes.contains(attributes[i].toString()))
                 for (Map.Entry<String, Integer> e : maps[attributes[i].getIndex() - 1].entrySet()) {
                     if (frequency < e.getValue() && !askedValues.contains(e.getKey())) {
                         attr = attributes[i];
@@ -81,7 +79,7 @@ public class QuestionEngine {
         }
         return null;
     }
-    void pushAnswer(boolean answer) throws JessException {
+    public void pushAnswer(boolean answer) throws JessException {
         QuestionItem lastQuestion = questionItems.getLast();
         askedValues.add(lastQuestion.getAttributeValue().getValue());
         lastQuestion.getAttributeValue().setNegation(answer);

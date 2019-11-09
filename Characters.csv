@@ -1,4 +1,4 @@
-Id,Name,Gender,Job,House,Wand,Patronus,Species,Blood status,Hair colour,Eye colour,Loyalty,Skills
+Id,Name,Gender,Job,House,Wand,Patronus,Species,Blood status,,Eye colour,Loyalty,Skills
 1,Harry James Potter,Male,Student,Gryffindor,11  Holly  phoenix feather,Stag,Human,Half-blood,Black,Bright green,Albus Dumbledore | Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry,Parseltongue| Defence Against the Dark Arts | Seeker
 2,Ronald Bilius Weasley,Male,Student,Gryffindor,12 Ash unicorn tail hair ,Jack Russell terrier,Human,Pure-blood,Red,Blue,Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry,Wizard chess | Quidditch goalkeeping
 3,Hermione Jean Granger,Female,Student,Gryffindor,10   vine wood dragon heartstring,Otter,Human,Muggle-born,Brown,Brown,Dumbledore's Army | Order of the Phoenix | Hogwarts School of Witchcraft and Wizardry,Almost everything
@@ -79,7 +79,7 @@ Id,Name,Gender,Job,House,Wand,Patronus,Species,Blood status,Hair colour,Eye colo
 78,Helga Hufflepuff,Female,Founder of Hufflepuff,Hufflepuff,Unknown,Unknown,Human,Pure-blood or Half-blood,Brown,Blue,Unknown,Food-related Charms. Many traditional Hogwarts recipes originated with her
 79,Fat Friar,Male,Hufflepuff House Ghost,Hufflepuff,Unknown,Unknown,Ghost,Unknown,Brown,Unknown,Unknown,Curing peasants of the pox
 80,Helena Ravenclaw,Female,Ravenclaw House Ghost,Ravenclaw,Unknown,Unknown,Ghost,Pure-blood or Half-blood,Black,Grey,Unknown,Unknown
-81,Nymphadora Tonks,Female,Auror,Hufflepuff,Unknown,Jack rabbit, Wolf,Human,Half-blood,Variable,Variable,Ministry of Magic | Order of the Phoenix
+81,Nymphadora Tonks,Female,Auror,Hufflepuff,Unknown,Jack rabbit,Human/Wolf,Half-blood,Variable,Variable,Variable,Ministry of Magic | Order of the Phoenix
 82,Pomona Sprout,Female,Professor of Herbology | Head of Hufflepuff House,Hufflepuff,Unknown,Non-corporeal,Human,Pure-blood or Half-blood,Unknown,Grey,Unknown,Herbology
 83,Newton Scamander,Male,Employee in the Beast Division of the Department for the Regulation and Control of Magical Creatures,Hufflepuff,Unknown,Unknown,Human,Pure-blood or Half-blood,Red brown,Blue,Unknown,Magizoology
 84,Cedric Diggory,Male,Student,Hufflepuff,"12 , Ash, unicorn hair",Unknown,Human,Pure-blood,Dark,Grey,Unknown,Skilled Seeker
@@ -92,20 +92,20 @@ Id,Name,Gender,Job,House,Wand,Patronus,Species,Blood status,Hair colour,Eye colo
 91,Augustus Rookwood,Male,Unspeakable,Slytherin,Unknown,None,Human,Pure-blood or Half-blood,Brown/greying,Unknown,Lord Voldemort  | Death Eaters,Spying for Lord Voldemort
 92,Antonin Dolohov,Male,Death Eater,Slytherin,Unknown,None,Human,Pure-blood or Half-blood,Dark,Unknown,Lord Voldemort  | Death Eaters,Duelling. Fought and killed Molly Weasley's brothers and Remus Lupin
 93,Corban Yaxley,Male,Head of the Department of Magical Law Enforcement,Slytherin,Unknown,None,Human,Pure-blood or Half-blood,Blonde,Blue,Lord Voldemort  | Death Eaters,Imperius curse
-94,Igor Karkaroff,Male,Headmaster of Durmstrang Institute,Unknown,Unknown,None,Human,Pure-blood or Half-blood,Silver| formerly black,Unknown,Unknown,Skilled in the Dark Arts
+94,Igor Karkaroff,Male,Headmaster of Durmstrang Institute,Unknown,Unknown,None,Human,Pure-blood or Half-blood,Silver | formerly black,Unknown,Unknown,Skilled in the Dark Arts
 95,Kingsley Shacklebolt,Male,Auror  | Minister for Magic,Unknown,Unknown,Lynx,Human,Pure-blood,Bald,Black,Order of the Phoenix,Exceptionally skilled duellist and Auror
 96,Alastor Moody,Male,Auror ,Unknown,Unknown,Non-corporeal,Human,Pure-blood,Grey,One dark, one electric blue,Order of the Phoenix
 97,Alice Longbottom,Female,Auror,Unknown,Unknown,Unknown,Human,Pure-blood,Blonde,Unknown,Original Order of the Phoenix,Auror
-98,Frank Longbottom,Male,Auror,Gryffindor,Inherited by his son, Neville. It was broken in battle at the Department of Mysteries.,Unknown,Human,Pure-blood,Blonde,Unknown,Original Order of the Phoenix
+98,Frank Longbottom,Male,Auror,Gryffindor,Inherited by his son, Neville. It was broken in battle at the Department of Mysteries.,Human,Pure-blood,Blonde,Unknown,Unknown,Original Order of the Phoenix
 99,Rufus Scrimgeour,Male,Head of Auror Office| Minister for Magic,Unknown,Unknown,Non-corporeal,Human,Unknown,Tawny,Yellowish,Minister of Magic,Highly regarded as a skilled Auror
 100,Cornelius Oswald Fudge,Male,Minister for Magic,Unknown,Unknown,Non-corporeal,Human,Pure-blood or Half-blood,Grey,Unknown,Minister of Magic,Turning a blind eye to the continuing threat of Dark Magic in the name of keeping up morale
 101,Barty Crouch Sr.,Male,Head of the Department of International Magical Cooperation,Unknown,Unknown,Non-corporeal,Human,Pure-blood,Grey,Unknown,Minister of Magic,Multilingual
 102,Amos Diggory,Male,Employee of the Department for the Regulation and Control of Magical Creatures[,Unknown,Unknown,Non-corporeal,Human,Pure-blood or Half-blood,Brown,Ruddy,Minister of Magic,Works for the Department for the Regulation and Control of Magical Creatures
 103,Dedalus Diggle,Male,Unknown,Unknown,Unknown,Non-corporeal,Human,Pure-blood or Half-blood,Unknown,Unknown,Order of the Phoenix,An enthusiastic volunteer for the Order and a helpful escort for Harry and his relatives
-104,Elphias Doge,Male,Special Advisor to the Wizengamot,Unknown,Unknown,Non-corporeal,Human,Pure-blood,Silver,Grey/Blue[,Order of the Phoenix,Writing
-105,Fleur Isabelle Delacour,Female,Part-time at Gringotts Wizarding Bank,Beauxbatons Academy of Magic,"9 , Rosewood, veela hair",Non-corporeal,Human,Quarter-Veela,Silvery-blonde,Dark blue[,Order of the Phoenix,part Veela
+104,Elphias Doge,Male,Special Advisor to the Wizengamot,Unknown,Unknown,Non-corporeal,Human,Pure-blood,Silver,Grey/Blue,Order of the Phoenix,Writing
+105,Fleur Isabelle Delacour,Female,Part-time at Gringotts Wizarding Bank,Beauxbatons Academy of Magic,"9 , Rosewood, veela hair",Non-corporeal,Human,Quarter-Veela,Silvery-blonde,Dark blue,Order of the Phoenix,part Veela
 106,Aberforth Dumbledore,Male,Owner and Barman of the Hog's Head Inn,Unknown,Unknown,Goat,Human,Half-blood,Grey,Bright Blue,Order of the Phoenix,Bartending
-107,Mundungus Fletcher,Male,Dealer of wizarding artifacts,Unknown,Unknown,Non-corporeal,Human,Half-blood[,Ginger,Brown,Order of the Phoenix,Gathering information for the Order
+107,Mundungus Fletcher,Male,Dealer of wizarding artifacts,Unknown,Unknown,Non-corporeal,Human,Half-blood,Ginger,Brown,Order of the Phoenix,Gathering information for the Order
 108,Sturgis Podmore,Male,Advance Guard,Unknown,Unknown,Unknown,Human,Pure-blood or Half-blood,Straw-coloured,Brown,Order of the Phoenix,Carrying out guard duty for the Order
 109,Hestia Jones,Female,Advance Guard,Unknown,Unknown,Unknown,Human,Pure-blood or Half-blood,Black,Unknown,Order of the Phoenix,Carrying out escort missions for the Order
 110,Marlene McKinnon,Female,Unknown,Unknown,Unknown,Unknown,Human,Unknown,Red,Brown,Original Order of the Phoenix,Unknown
@@ -138,4 +138,4 @@ Id,Name,Gender,Job,House,Wand,Patronus,Species,Blood status,Hair colour,Eye colo
 137,Fenrir Greyback,Male,Unknown,Unknown,Unknown,None,Werewolf,Unknown,Grey,Unknown,Lord Voldemort  | Death Eaters,Physical combat
 138,Gellert Grindelwald,Male,Revolutionary leader(c. 1920s[6]   1945),Unknown,"15, Elder, Thestral tail hair core",Unknown,Human ,Pure-blood or Half-blood,Blond,Blue,Gellert Grindelwald's Acolytes,Duelling
 139,Dobby,Male,Malfoy family's house-elf (? - 1993) | Hogwarts kitchens worker (December 1994 - 1998),Unknown,Unknown,Unknown,House elf,Unknown,Green,Unknown,Unknown,A type of magic specific to house-elves
-140,Kreacher,Male,"Black family's house-elf (?-1996) | Harry Potter's house-elf | Hogwarts kitchen worker ",Unknown,Unknown,Unknown,House elf,Unknown,White,Unknown,Unknown,Magic performed without a wand which includes the ability to apparate
+140,Kreacher,Male,Black family's house-elf (?-1996) | Harry Potter's house-elf | Hogwarts kitchen worker ,Unknown,Unknown,Unknown,House elf,Unknown,White,Unknown,Unknown,Magic performed without a wand which includes the ability to apparate

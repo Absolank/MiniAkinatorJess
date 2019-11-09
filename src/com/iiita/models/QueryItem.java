@@ -27,7 +27,7 @@ public class QueryItem {
         sb.append(")");
         queryAttribute = sb.toString();
     }
-    public QueryItem(Attribute attribute){
+    QueryItem(Attribute attribute){
         this.attribute = attribute;
         this.values = new ArrayList<>();
         genQueryString();
@@ -37,7 +37,7 @@ public class QueryItem {
         this.values = values;
         genQueryString();
     }
-    public void addValue(boolean neg, String value){
+    void addValue(boolean neg, String value){
         values.add(new AttributeValue(neg, value));
         genQueryString();
     }
@@ -45,7 +45,7 @@ public class QueryItem {
         return queryAttribute;
     }
 
-    public ArrayList<AttributeValue> getValues() {
+    ArrayList<AttributeValue> getValues() {
         return values;
     }
 

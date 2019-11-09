@@ -9,7 +9,7 @@ import jess.*;
 import java.io.*;
 import java.util.LinkedList;
 
-public class JessApi {
+class JessApi {
     private static JessApi jessApi;
     private Rete rete;
     private JessApi() throws IOException, JessException, CsvValidationException {
@@ -29,7 +29,7 @@ public class JessApi {
             insertCharacterToFactDatabase(hpc, rete);
         }
     }
-    public static synchronized JessApi getInstance() throws CsvValidationException, JessException, IOException {
+    static synchronized JessApi getInstance() throws CsvValidationException, JessException, IOException {
         if(jessApi == null)
             jessApi = new JessApi();
         return jessApi;
@@ -57,13 +57,13 @@ public class JessApi {
                 queryResult.getString("wand"),
                 queryResult.getString("patronus"),
                 queryResult.getString("species"),
-                queryResult.getString("hair_color"),
                 queryResult.getString("blood_status"),
+                queryResult.getString("hair_color"),
                 queryResult.getString("eye_color")
         );
     }
 
-    public LinkedList<HarryPotterCharacter> getPrediction(Query query) throws JessException {
+    LinkedList<HarryPotterCharacter> getPrediction(Query query) throws JessException {
         rete.eval(query.toString());
         LinkedList<HarryPotterCharacter> characterResults = new LinkedList<>();
         QueryResult results = rete.runQueryStar("temp-search", query.getValueVector());
